@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+    <title>ImageToAscii</title>
+  </head>
+ <body>
+    <canvas width="400" height="400" style="width: 400px; height: 400px;"></canvas>
+    <input type="file" id="fileInput" style="display: none;" accept=".png, .jpg, .jpeg"></input>
+    <label for="fileInput">Upload Image</label>
+    <button onclick="toAscii()" id="ascii">To ASCII</button>
+    <button onclick="downloadCanvas()" id="download" style="display: none;">Download</button>
+    <div id="scale" style="display: none;">
+      <p>Image Scale</p>
+      <input type="range" title="Reccomended to be small enough that you can see individual pixels. Do Not Spam Or It Could Break" id="imgSize" min="0.01" max="2" value="1" step="0.01" onchange="updateImgSize()" onmousemove="updateScaleDisplay()">
+      <p id="scaleDisplay">1x</p>
+    </div>
+    <br>
+    <div id="invert">
+      <p>Invert</p>
+      <input type="checkbox" onchange="invert = this.checked">
+    </div>
+    <br>
+    <div id="keepCol">
+      <p>Keep Image Colors</p>
+      <input type="checkbox" onchange="keepImgCols = this.checked">
+    </div>
+  </body>
+</html>

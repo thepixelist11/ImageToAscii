@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  background-color: #333;
+}
+canvas {
+  background-color: #ddd;
+  margin: 10px;
+  display: block;
+  image-rendering: pixelated;
+}
+label {
+  margin: 10px;
+  background-color: #ddd;
+  padding: 3px;
+  border: solid #000 1px;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+  margin: 10px;
+  display: block;
+  background-color: #ddd;
+  padding: 4px;
+  border: solid #000 1px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+button:hover {
+  background-color: #bbb;
+}
+label:hover {
+  background-color: #bbb;
+}
+#scale {
+  background-color: #ddd;
+  margin: 10px;
+  height: 28px;
+  border: solid 1px #000;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  user-select: none;
+}
+#imgSize {
+  margin: 0;
+}
+p {
+  display: inline;
+  margin: 10px;
+  color: #000;
+  font-size: 14px;
+  user-select: none;
+}
+#invert {
+  display: none;
+  background-color: #ddd;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  height: 24px;
+  border: solid 1px #000;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  padding-right: 6px;
+  user-select: none;
+  cursor: default;
+}
+#keepCol {
+  display: none;
+  background-color: #ddd;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  height: 24px;
+  border: solid 1px #000;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  padding-right: 6px;
+  user-select: none;
+  cursor: default;
+}
+input{
+  cursor: pointer;
+}
