@@ -319,6 +319,7 @@ function toAscii(){
   document.getElementById('scale').style.display = 'none'
   document.getElementById('invert').style.display = 'none'
   document.getElementById('keepCol').style.display = 'none'
+  document.querySelector('button').style.display = 'none'
 }
 
 function getColArray(){
@@ -381,7 +382,7 @@ function renderAscii(bgCol = new col(255, 255, 255), txtCol = new col(0, 0, 0), 
     } else {
       ctx.fillStyle = `rgb(${realCols[i].r}, ${realCols[i].g}, ${realCols[i].b})`
     }
-    ctx.fillText(chars[Math.floor(lerp(0, chars.length, colToValue(colArr[i]) / 1))], index2coords(i, image.width).x * size, index2coords(i, image.width).y * size)
+    ctx.fillText(chars[Math.floor(lerp(0, chars.length - 1, colToValue(colArr[i]) / 1))], index2coords(i, image.width).x * size, index2coords(i, image.width).y * size)
   }
 }
 
@@ -441,9 +442,10 @@ let realCols = []
 '▒░ '
 '@ '
 'WGQOKHXYFCCBMTNEARHTNEAbdeousnr^\\JLZvyjyqpkhfa-t\"t<>}{)(][I'.,:-_*!|i1l!;:., '
+'@BW*boapwmQOLct/|(1-_+:^\'.` '
 */
 
-let chars = '@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,"^\'.` '.split('')
+let chars = '@BW*boapwmQOLct/|(1-_+:^\'.` '.split('')
 
 // -------- Main
 main()
@@ -470,6 +472,7 @@ function main(){
       document.getElementById('scale').style.display = 'inline-flex'
       document.getElementById('invert').style.display = 'inline-flex'
       document.getElementById('keepCol').style.display = 'inline-flex'
+      document.querySelector('button').style.display = 'block'
     }
     const aspectRatio = image.width / image.height
     canvas.style.width = `${400 * aspectRatio}px`
