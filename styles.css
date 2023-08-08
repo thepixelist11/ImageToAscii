@@ -87,3 +87,6 @@ p {
 input{
   cursor: pointer;
 }
+#dimensionsDisplay{
+  margin-left: 6px;
+}

@@ -414,6 +414,7 @@ function updateImgSize(){
 
 function updateScaleDisplay(){
   document.getElementById('scaleDisplay').innerHTML = `${document.getElementById('imgSize').value}x`
+  document.getElementById('dimensionsDisplay').innerHTML = `${image.width} x ${image.height}`
 }
 
 // -------- Variables and Constants
@@ -465,10 +466,12 @@ document.getElementById('fileInput').onchange = function (evt) {
 
 function main(){
   ctx.clearRect(0, 0, canvas.width, canvas.height)
+  document.getElementById('dimensionsDisplay').innerHTML = `${image.width} x ${image.height}`
   
   if(image.src){
     if(originSrc === undefined){
       originSrc = image.src
+      document.getElementById('dimensionsDisplay').innerHTML = `${image.width} x ${image.height}`
       document.getElementById('scale').style.display = 'inline-flex'
       document.getElementById('invert').style.display = 'inline-flex'
       document.getElementById('keepCol').style.display = 'inline-flex'
