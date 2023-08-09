@@ -125,6 +125,7 @@ function drawPoly(points, ctx, borderWidth, color = new col(0, 0, 0), filled = f
     }
     ctx.lineTo(points[0][0], points[0][1])
     ctx.fill();
+    ctx.stroke();
   }
 }
 
